@@ -12,7 +12,7 @@ const updateNote = (id, content) => {
   // Get the notes from local storage
   const notes = getNotes();
   const target = notes.filter((note) => note.id == id)[0];
-  //   Update content and save
+  //   Update content and save a one types
   target.content = content;
   saveNote(notes);
 };
@@ -69,6 +69,7 @@ const addNote = () => {
   saveNote(notes);
 };
 
+// Add a note whenever the '+' button is clicked
 btnElem.addEventListener("click", addNote);
 
 // Render all notes in the local storage on the page
